@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Studio 535</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #ffd60a, #00d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glass { background: rgba(11, 15, 23, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
+</head>
+<body class="bg-[#05070b] text-gray-200 min-h-screen font-sans">
+  <nav class="flex justify-between items-center px-8 py-6 border-b border-gray-800">
+    <a href="/" class="text-2xl font-bold gradient-text">STUDIO 535</a>
+    <a href="/" class="hover:text-yellow-400 transition">Home</a>
+  </nav>
+
+  <main class="px-8 py-20 max-w-6xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4">Portfolio</h1>
+    <p class="text-gray-400 mb-12">Precision laser engraving and 3D printing work</p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="h-48 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center border border-yellow-400/20">
+          <span class="text-4xl">🎨</span>
+          <p class="text-xs mt-2">Masonic Vitruvian Medallion</p>
+        </div>
+        <h3 class="font-bold">Laser Engraving</h3>
+        <p class="text-gray-400 text-sm">Wood, acrylic, metal</p>
+      </div>
+
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="h-48 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center border border-cyan-400/20">
+          <span class="text-4xl">🔷</span>
+          <p class="text-xs mt-2">Shriners-Style Pin</p>
+        </div>
+        <h3 class="font-bold">Custom Design</h3>
+        <p class="text-gray-400 text-sm">Personalized gifts</p>
+      </div>
+
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="h-48 bg-gradient-to-br from-purple-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center border border-purple-400/20">
+          <span class="text-4xl">⚙️</span>
+          <p class="text-xs mt-2">Greek Key Coin</p>
+        </div>
+        <h3 class="font-bold">3D + Laser Fusion</h3>
+        <p class="text-gray-400 text-sm">Ornamental designs</p>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-400 mb-4">To add your actual photos:</p>
+      <code class="px-4 py-2 glass rounded-lg text-sm">studio535-astro/public/images/portfolio/</code>
+    </div>
+  </main>
+</body>
+</html>
