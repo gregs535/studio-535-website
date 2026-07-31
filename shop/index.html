@@ -3,52 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop - Studio 535</title>
+  <title>Shop - Studio 535 Digital Products for Makers</title>
+  <meta name="description" content="Studio 535 digital products for maker businesses: AI prompt engineering, automation kits, Notion OS, and product photography playbooks. Instant download on Gumroad." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #ffd60a, #00d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glass { background: rgba(11, 15, 23, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
 </head>
 <body class="bg-[#05070b] text-gray-200 min-h-screen font-sans">
   <nav class="flex justify-between items-center px-8 py-6 border-b border-gray-800">
-    <a href="/" class="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-cyan-400 bg-clip-text text-transparent">STUDIO 535</a>
-    <a href="/contact" class="hover:text-yellow-400 transition">Contact</a>
+    <a href="/" class="text-2xl font-bold gradient-text">STUDIO 535</a>
+    <div class="flex gap-6">
+      <a href="/" class="hover:text-yellow-400 transition">Home</a>
+      <a href="/shop" class="hover:text-yellow-400 transition">Shop</a>
+      <a href="/blog" class="hover:text-yellow-400 transition">Blog</a>
+      <a href="/contact" class="hover:text-cyan-400 transition">Contact</a>
+    </div>
   </nav>
 
   <main class="px-8 py-20 max-w-6xl mx-auto">
-    <h1 class="text-4xl font-bold mb-12">Digital Products</h1>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Product 1 -->
-      <div class="glass rounded-xl p-6 text-center">
-        <div class="h-48 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center">
-          <span class="text-6xl">📄</span>
-        </div>
-        <h3 class="font-bold text-lg mb-2">Sales Copy Starter Kit</h3>
-        <p class="text-gray-400 text-sm mb-4">Templates for landing pages, emails, proposals</p>
-        <p class="text-2xl font-bold text-yellow-400">$15</p>
-        <button class="mt-4 px-4 py-2 bg-yellow-400 text-black rounded-full">Buy on Etsy</button>
-      </div>
+    <h1 class="text-4xl font-bold mb-4 text-center">Digital Products for Maker Businesses</h1>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Done-for-you systems, prompts, and playbooks — built by a maker, tested in a real shop. Instant download, lifetime access.</p>
 
-      <!-- Product 2 -->
-      <div class="glass rounded-xl p-6 text-center">
-        <div class="h-48 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center">
-          <span class="text-6xl">🐕</span>
-        </div>
-        <h3 class="font-bold text-lg mb-2">Pet Tag Templates</h3>
-        <p class="text-gray-400 text-sm mb-4">SVG laser files for 20 designs</p>
-        <p class="text-2xl font-bold text-cyan-400">$12</p>
-        <button class="mt-4 px-4 py-2 glass border border-white/10 rounded-full">Coming Soon</button>
-      </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Product: Prompt Engineering -->
+      <a href="https://studiogreg.gumroad.com/l/qmksb" target="_blank" rel="noopener" class="glass rounded-2xl p-8 hover:border-yellow-400 transition block">
+        <div class="h-36 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center text-5xl">🤖</div>
+        <p class="text-cyan-400 text-sm mb-2">PROMPT PLAYBOOK</p>
+        <h2 class="font-bold text-lg mb-3 text-white">AI Prompt Engineering for Makers</h2>
+        <p class="text-gray-400 text-sm mb-4">12 copy-paste prompt patterns for listings, tags, customer replies, custom quotes, and wholesale outreach.</p>
+        <p class="text-2xl font-bold text-yellow-400 mb-3">$19.99</p>
+        <span class="inline-block px-4 py-2 bg-yellow-400 text-black font-bold rounded-full text-sm">Buy on Gumroad</span>
+      </a>
 
-      <!-- Product 3 -->
-      <div class="glass rounded-xl p-6 text-center">
-        <div class="h-48 bg-gradient-to-br from-purple-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center">
-          <span class="text-6xl">🧒</span>
-        </div>
-        <h3 class="font-bold text-lg mb-2">Children's Ebook</h3>
-        <p class="text-gray-400 text-sm mb-4">Robot learns to garden - illustrated</p>
-        <p class="text-2xl font-bold text-purple-400">$8</p>
-        <button class="mt-4 px-4 py-2 glass border border-white/10 rounded-full">Coming Soon</button>
-      </div>
+      <!-- Product: Automation Kit -->
+      <a href="https://studiogreg.gumroad.com/l/cushl" target="_blank" rel="noopener" class="glass rounded-2xl p-8 hover:border-yellow-400 transition block">
+        <div class="h-36 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center text-5xl">⚙️</div>
+        <p class="text-cyan-400 text-sm mb-2">AUTOMATION KIT</p>
+        <h2 class="font-bold text-lg mb-3 text-white">Maker Business AI Automation Kit</h2>
+        <p class="text-gray-400 text-sm mb-4">7 ready-to-copy workflows: n8n templates, Sheets formulas, and email scripts that run your shop while you make.</p>
+        <p class="text-2xl font-bold text-yellow-400 mb-3">$37</p>
+        <span class="inline-block px-4 py-2 bg-yellow-400 text-black font-bold rounded-full text-sm">Buy on Gumroad</span>
+      </a>
+
+      <!-- Product: Notion OS -->
+      <a href="https://studiogreg.gumroad.com/l/ukmcji" target="_blank" rel="noopener" class="glass rounded-2xl p-8 hover:border-yellow-400 transition block">
+        <div class="h-36 bg-gradient-to-br from-purple-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center text-5xl">🗂️</div>
+        <p class="text-cyan-400 text-sm mb-2">NOTION OS</p>
+        <h2 class="font-bold text-lg mb-3 text-white">Maker Business Notion OS</h2>
+        <p class="text-gray-400 text-sm mb-4">Five linked databases and three views: orders, clients, inventory, content, and projects in one workspace.</p>
+        <p class="text-2xl font-bold text-yellow-400 mb-3">$27</p>
+        <span class="inline-block px-4 py-2 bg-yellow-400 text-black font-bold rounded-full text-sm">Buy on Gumroad</span>
+      </a>
+
+      <!-- Product: Photography Playbook -->
+      <a href="https://studiogreg.gumroad.com/l/tclvxx" target="_blank" rel="noopener" class="glass rounded-2xl p-8 hover:border-yellow-400 transition block">
+        <div class="h-36 bg-gradient-to-br from-green-400/20 to-transparent rounded-lg mb-4 flex items-center justify-center text-5xl">📷</div>
+        <p class="text-cyan-400 text-sm mb-2">PHOTOGRAPHY PLAYBOOK</p>
+        <h2 class="font-bold text-lg mb-3 text-white">AI Product Photography Playbook</h2>
+        <p class="text-gray-400 text-sm mb-4">A $0 shoot-and-edit pipeline: window light, free upscalers, background swap, relight, and platform export specs.</p>
+        <p class="text-2xl font-bold text-yellow-400 mb-3">$27</p>
+        <span class="inline-block px-4 py-2 bg-yellow-400 text-black font-bold rounded-full text-sm">Buy on Gumroad</span>
+      </a>
+    </div>
+
+    <div class="glass rounded-2xl p-8 my-16 text-center max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold mb-3 text-white">Get the Full Stack Bundle</h2>
+      <p class="text-gray-400 mb-6">All four products for one price — the complete maker-business operating system.</p>
+      <a href="https://studiogreg.gumroad.com" target="_blank" rel="noopener" class="inline-block px-8 py-3 bg-yellow-400 text-black font-bold rounded-full hover:bg-yellow-300 transition">See All Products on Gumroad</a>
     </div>
   </main>
+
+  <footer class="px-8 py-12 border-t border-gray-800 text-center text-gray-500">
+    <p>&copy; 2026 Studio 535 / Dream Forge LLC. All rights reserved.</p>
+    <p class="mt-2">Precision Crafted in Virginia Beach, VA</p>
+  </footer>
 </body>
 </html>
