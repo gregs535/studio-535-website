@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gregs535.github.io/studio-535-website/</loc><priority>1.0</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/shop</loc><priority>0.9</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/contact</loc><priority>0.6</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/portfolio</loc><priority>0.6</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/services</loc><priority>0.6</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/consulting</loc><priority>0.7</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/blog/</loc><priority>0.7</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/blog/ai-etsy-listings</loc><priority>0.8</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/blog/ai-photography-makers</loc><priority>0.8</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/blog/automate-your-maker-shop</loc><priority>0.8</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/blog/small-business-automation</loc><priority>0.8</priority></url>
+  <url><loc>https://gregs535.github.io/studio-535-website/blog/notion-os-for-makers</loc><priority>0.8</priority></url>
+</urlset>
