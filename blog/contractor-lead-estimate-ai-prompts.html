@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contractor Lead-to-Estimate AI Prompts for More Booked Jobs | Studio 535</title>
+  <meta name="description" content="Practical contractor AI prompts to qualify leads, clarify project scope, book walkthroughs, and follow up on estimates—with a human-review workflow that never sounds robotic.">
+  <meta name="author" content="Studio 535">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Contractor Lead-to-Estimate AI Prompts for More Booked Jobs">
+  <meta property="og:description" content="Use AI to qualify project inquiries, capture budget and scope, schedule walkthroughs, and follow up on open estimates without letting it invent prices or promises.">
+  <meta property="article:published_time" content="2026-08-05">
+  <meta property="article:section" content="Contractor Operations">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Contractor Lead-to-Estimate AI Prompts for More Booked Jobs",
+    "description": "Practical contractor AI prompts to qualify leads, clarify project scope, book walkthroughs, and follow up on estimates with a human-review workflow.",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": { "@type": "Organization", "name": "Studio 535" },
+    "publisher": { "@type": "Organization", "name": "Studio 535" }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #ffd60a, #00d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glass { background: rgba(11, 15, 23, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .prose { max-width: 48rem; }
+    .prose h2 { color: #ffd60a; font-size: 1.6rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose h3 { color: #00d4ff; font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .prose p { color: #cbd5e1; margin-bottom: 1rem; line-height: 1.7; }
+    .prose ul, .prose ol { color: #cbd5e1; margin-bottom: 1rem; padding-left: 1.25rem; }
+    .prose ul { list-style: disc; }
+    .prose ol { list-style: decimal; }
+    .prose li { margin-bottom: 0.4rem; }
+    .prose a:not(.cta) { color: #22d3ee; text-decoration: underline; text-underline-offset: 3px; }
+    .prose code { background: #1e293b; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; color: #7dd3fc; }
+    .prose pre { background: #0f172a; padding: 1rem; border-radius: 8px; overflow-x: auto; white-space: pre-wrap; border: 1px solid #334155; margin-bottom: 1rem; }
+    .prose pre code { background: none; color: #e2e8f0; padding: 0; }
+  </style>
+</head>
+<body class="bg-[#05070b] text-gray-200 min-h-screen font-sans">
+  <nav class="flex justify-between items-center px-8 py-6 border-b border-gray-800">
+    <a href="/" class="text-2xl font-bold gradient-text">STUDIO 535</a>
+    <div class="flex gap-6">
+      <a href="/" class="hover:text-yellow-400 transition">Home</a>
+      <a href="/shop" class="hover:text-yellow-400 transition">Shop</a>
+      <a href="/blog" class="hover:text-yellow-400 transition">Blog</a>
+      <a href="/contact" class="hover:text-cyan-400 transition">Contact</a>
+    </div>
+  </nav>
+
+  <article class="px-8 py-16 max-w-4xl mx-auto prose">
+    <p class="text-cyan-400 text-sm mb-2">BLOG &middot; CONTRACTOR OPERATIONS</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">Contractor Lead-to-Estimate AI Prompts for More Booked Jobs</h1>
+    <p class="text-gray-500 mb-10">Published August 5, 2026 by Studio 535 &middot; Practical AI workflows for service businesses</p>
+
+    <p>Most contractor leads die in the gap between &ldquo;interested&rdquo; and &ldquo;walkthrough.&rdquo; AI can help with the writing and organization of that gap—qualifying inquiries, capturing scope, scheduling visits, and following up on estimates—but it should not invent prices, make promises, or decide which projects fit your business.</p>
+
+    <p>The useful pattern is simple: collect the facts in a fixed qualification flow, ask AI to draft the response, then have a human approve before sending. That keeps the tool in its best role—drafting—while your team retains control of fit, pricing, and promises.</p>
+
+    <div class="glass rounded-2xl p-6 my-8">
+      <p class="text-white font-semibold mb-2">The guardrail that matters most</p>
+      <p class="mb-0">Never let AI quote a price, commit to a timeline, promise a specific result, or answer a question about code, permits, or safety that your estimator has not approved. Every draft that touches money, scope, or schedule goes through a human before it is sent.</p>
+    </div>
+
+    <h2>Start With a Qualification Flow</h2>
+    <p>AI cannot repair missing source information. Before prompting, capture the lead&rsquo;s name and callback number, project type, approximate size or scope, whether they are the decision-maker, rough timeline, service address, how they found you, and any notes from the first conversation.</p>
+
+    <p>Keep observations separate from conclusions. &ldquo;Lead wants a 400-square-foot deck with composite decking&rdquo; is useful. &ldquo;This is a $30K project that will close this week&rdquo; is a prediction the model is not in a position to make.</p>
+
+    <h2>Copy-Paste Lead Qualification Prompt</h2>
+    <p>This prompt turns rough inquiry notes into a clean qualification summary and a draft response:</p>
+    <pre><code>You are an administrative assistant for a [TRADE] contracting company.
+Turn the notes below into a lead qualification summary.
+
+Return exactly these sections:
+1. Lead and contact details
+2. Project type and scope (use the lead&rsquo;s words; do not guess)
+3. Budget and timeline signals (only what was said)
+4. Decision-maker status
+5. Fit notes for the estimator (scope, access, red flags)
+6. Missing information the office should ask for
+7. One draft reply under 200 characters that schedules a walkthrough
+
+Rules:
+- Use only the supplied facts.
+- Never invent a price, discount, availability, or promise.
+- Flag anything about permits, code, or safety for human review.
+- If a detail is unknown, write &ldquo;not provided.&rdquo;
+
+LEAD NOTES:
+[PASTE DE-IDENTIFIED OR COMPANY-APPROVED NOTES]</code></pre>
+
+    <h2>Five High-Value Uses for Contractors</h2>
+    <h3>1. First-response qualification</h3>
+    <p>Ask AI to draft the first reply that collects project type, approximate scope, decision-maker status, and timeline. Require it to stay under a few sentences and to schedule a walkthrough rather than asking open-ended essay questions.</p>
+
+    <h3>2. Scope clarification</h3>
+    <p>Provide the model with your standard scope questions—area, materials, access, exclusions, and anything a previous contractor got wrong. Ask for a numbered list the lead can answer quickly instead of a long paragraph.</p>
+
+    <h3>3. Walkthrough scheduling</h3>
+    <p>Draft the invitation and confirmation using your actual open slots. Ask the model to include a short prep list (access, keys, decision-makers present) and to avoid promising that the estimator will have a number ready on the spot.</p>
+
+    <h3>4. Estimate delivery and objection follow-up</h3>
+    <p>Using only the estimator&rsquo;s approved scope and price, draft the delivery message plus day-3 and day-10 follow-ups. Tell the model to offer a line-by-line comparison if the lead has another quote, and never to discount without approval.</p>
+
+    <h3>5. Dormant lead reactivation</h3>
+    <p>Draft a value-based check-in for quotes older than two weeks: seasonal timing, price-protection, or a recently completed nearby project. Keep it short, offer a clear next step, and allow the office to close the file gracefully.</p>
+
+    <div class="glass rounded-2xl p-6 my-8">
+      <h3 class="mt-0">Want the ready-to-use contractor prompt library?</h3>
+      <p class="mb-4">The <strong>Contractor Lead-to-Estimate Prompt Pack</strong> gives your office 50 templates for lead qualification, scope clarification, walkthrough scheduling, estimate delivery, and dormant-lead follow-up—so you can standardize the workflow without writing every prompt from scratch.</p>
+      <a href="https://studiogreg.gumroad.com/l/contractor-lead-estimate-ai-prompts" rel="sponsored noopener" target="_blank" class="cta inline-block px-6 py-3 bg-cyan-400 text-black font-bold rounded-full hover:bg-cyan-300 transition">See the Contractor Lead-to-Estimate Pack &rarr;</a>
+    </div>
+
+    <h2>Use a Five-Point Review Before Sending</h2>
+    <ol>
+      <li><strong>Facts:</strong> Compare names, addresses, scope details, dates, and any numbers against the source record.</li>
+      <li><strong>Promises:</strong> Remove invented prices, discounts, timelines, availability, and project outcomes.</li>
+      <li><strong>Scope:</strong> Confirm the draft does not expand or shrink the scope the estimator approved.</li>
+      <li><strong>Tone:</strong> Make the message direct, friendly, and easy to act on.</li>
+      <li><strong>Privacy:</strong> Use only tools and data-handling practices approved by your business. Minimize customer information whenever possible.</li>
+    </ol>
+
+    <h2>A Better Prompt Formula for Any Contractor</h2>
+    <p>Build each prompt from five parts: <strong>role</strong> (administrative assistant for a [TRADE] company), <strong>source facts</strong> (your approved qualification fields), <strong>output</strong> (summary, reply, or checklist), <strong>boundaries</strong> (no invented prices or promises), and <strong>review rule</strong> (an estimator approves before use). This formula is more dependable than asking, &ldquo;Write a reply to this lead.&rdquo;</p>
+
+    <p>If you want to connect these drafts to a broader operations system, read <a href="/blog/automate-your-maker-shop">our guide to practical small-business automation</a> or explore <a href="/consulting">Studio 535 AI consulting</a>. The same structure can move approved lead notes into your CRM, create a follow-up task, and leave the send button with your team.</p>
+
+    <div class="glass rounded-2xl p-8 my-12 text-center">
+      <h2 class="text-yellow-400 text-2xl mt-0 mb-3">Turn More Inquiries Into Booked Walkthroughs</h2>
+      <p class="mb-6">Get the <strong>Contractor Lead-to-Estimate Prompt Pack</strong> for copy-ready workflows your team can adapt to its trade, software, and service area.</p>
+      <a href="https://studiogreg.gumroad.com/l/contractor-lead-estimate-ai-prompts" rel="sponsored noopener" target="_blank" class="cta inline-block px-8 py-3 bg-yellow-400 text-black font-bold rounded-full hover:bg-yellow-300 transition">Get the Contractor Prompt Pack &rarr;</a>
+    </div>
+
+    <p class="text-gray-500 text-sm">Related: <a href="/blog/hvac-dispatcher-ai-prompts">HVAC Dispatcher AI Prompts</a> &middot; <a href="/blog/plumbing-dispatcher-ai-prompts">Plumbing Dispatcher AI Prompts</a> &middot; <a href="/blog/electrical-dispatcher-ai-prompts">Electrical Dispatcher AI Prompts</a> &middot; <a href="/blog">More Studio 535 guides</a></p>
+  </article>
+
+  <footer class="px-8 py-12 border-t border-gray-800 text-center text-gray-500">
+    <p>&copy; 2026 Studio 535 / Dream Forge LLC. All rights reserved.</p>
+    <p class="mt-2">Precision Crafted in Virginia Beach, VA</p>
+  </footer>
+</body>
+</html>
