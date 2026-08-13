@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Run AI on Your Own Computer (No Cloud, No Subscription) | Studio 535</title>
+  <meta name="description" content="A practical guide to running private AI on your own hardware with Ollama: what you need, how to install it, and 5 things you can do with a local model today — including writing fiction and automating your business.">
+  <meta name="author" content="Studio 535">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Run AI on Your Own Computer (No Cloud, No Subscription)">
+  <meta property="og:description" content="Everything you need to run private local AI: hardware sizing, the 15-minute Ollama install, RAG on your own documents, and 5 real things you can do today.">
+  <meta property="article:published_time" content="2026-08-12">
+  <meta property="article:section" content="Local AI">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Run AI on Your Own Computer (No Cloud, No Subscription)",
+    "description": "A practical guide to running private local AI with Ollama: hardware, install, RAG, and five real use cases.",
+    "datePublished": "2026-08-12",
+    "dateModified": "2026-08-12",
+    "author": { "@type": "Organization", "name": "Studio 535" },
+    "publisher": { "@type": "Organization", "name": "Studio 535" }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #ffd60a, #00d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glass { background: rgba(11, 15, 23, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .prose { max-width: 48rem; }
+    .prose h2 { color: #ffd60a; font-size: 1.6rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose h3 { color: #00d4ff; font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .prose p { color: #cbd5e1; margin-bottom: 1rem; line-height: 1.7; }
+    .prose ul, .prose ol { color: #cbd5e1; margin-bottom: 1rem; padding-left: 1.25rem; }
+    .prose ul { list-style: disc; }
+    .prose ol { list-style: decimal; }
+    .prose li { margin-bottom: 0.4rem; }
+    .prose a:not(.cta) { color: #22d3ee; text-decoration: underline; text-underline-offset: 3px; }
+    .prose pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1rem; font-size: 0.85rem; }
+    .prose code { background: #0f172a; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.85rem; }
+    .cta { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 700; transition: all 0.15s; }
+  </style>
+</head>
+<body class="bg-[#05070b] text-gray-200 min-h-screen font-sans">
+  <nav class="flex justify-between items-center px-8 py-6 border-b border-gray-800">
+    <a href="/" class="text-2xl font-bold gradient-text">STUDIO 535</a>
+    <div class="flex gap-6">
+      <a href="/" class="hover:text-yellow-400 transition">Home</a>
+      <a href="/shop" class="hover:text-yellow-400 transition">Shop</a>
+      <a href="/blog" class="hover:text-yellow-400 transition">Blog</a>
+      <a href="/contact" class="hover:text-cyan-400 transition">Contact</a>
+    </div>
+  </nav>
+
+  <main class="px-8 py-16 max-w-4xl mx-auto">
+    <article class="prose">
+      <p class="text-cyan-400 text-sm mb-2">LOCAL AI · 5 MIN READ</p>
+      <h1 class="text-4xl font-bold text-white mb-6">How to Run AI on Your Own Computer — No Cloud, No Subscription</h1>
+      <p class="text-gray-500 mb-10">August 12, 2026 · Studio 535</p>
+
+      <p>Every week a new AI subscription shows up in someone's budget: $20 here, $20 there, and suddenly you're paying $100+ a month for tools that phone home with everything you type. There's a different way: <strong>run the model on your own computer.</strong></p>
+
+      <p>This isn't a science project. A mid-range GPU — or even a decent laptop — can run genuinely useful AI that:</p>
+      <ul>
+        <li>Never sends your prompts anywhere</li>
+        <li>Works offline</li>
+        <li>Costs $0 per query after setup</li>
+        <li>Has no usage limits, no "continue" paywalls, no guardrails you don't choose</li>
+      </ul>
+
+      <h2>What you actually need</h2>
+      <p>The honest hardware table (Q4 quantization, the sweet spot):</p>
+      <ul>
+        <li><strong>3B model (~2 GB VRAM)</strong> — classification, tagging, light chat. Any 8 GB laptop.</li>
+        <li><strong>7–9B model (~6 GB)</strong> — general chat, writing, code. An 8 GB GPU or 16 GB Mac.</li>
+        <li><strong>14B (~10 GB)</strong> — better reasoning, long writing. 12–16 GB GPU.</li>
+        <li><strong>27B (~17 GB)</strong> — strong reasoning, unrestricted writing. 24 GB GPU (used 3090s go for ~$600).</li>
+      </ul>
+      <p>No GPU? A 7B model on a modern CPU still runs at usable speed (~10–20 tokens/sec). Fine for chat and writing.</p>
+
+      <h2>The 15-minute install</h2>
+      <p>Ollama is the easiest path. Two commands:</p>
+      <pre><code>curl -fsSL https://ollama.com/install.sh | sh
+ollama pull gemma4:latest</code></pre>
+      <p>Verify it's alive and actually responding:</p>
+      <pre><code>curl -s http://localhost:11434/api/tags</code></pre>
+
+      <h2>Five things you can do today</h2>
+      <h3>1. Private writing that never leaves your machine</h3>
+      <p>Draft blogs, fiction, emails, and creative work with a model that isn't filtered and doesn't report back. For a complete, polished experience — branching stories with choices, save/load, and export — check out <a href="https://studiogreg.gumroad.com/l/storyforge-ai-fiction-engine" rel="sponsored noopener" target="_blank" class="cta bg-cyan-400 text-black">StoryForge, our private fiction engine →</a></p>
+
+      <h3>2. Chat with your own documents (RAG)</h3>
+      <p>Embed your PDFs and ask questions with answers grounded in your own files. ~30 lines of Python, fully local. We cover the exact code in our <a href="https://studiogreg.gumroad.com/l/run-your-own-local-ai" rel="sponsored noopener" target="_blank" class="cta bg-yellow-400 text-black">Run Your Own Local AI guide →</a></p>
+
+      <h3>3. Automate your business without cloud API bills</h3>
+      <p>Point n8n at your local model and build an AI front desk — lead scoring, intake classification, document review — for $0 per query. See the <a href="https://studiogreg.gumroad.com/l/ai-front-desk-n8n-pack" rel="sponsored noopener" target="_blank" class="cta bg-yellow-400 text-black">AI Front Desk n8n pack →</a></p>
+
+      <h3>4. Unrestricted creative work</h3>
+      <p>Some models come without the usual refusals. With the right local model, your fiction, roleplay, and creative projects can go wherever they need to.</p>
+
+      <h3>5. A private API for your own apps</h3>
+      <p>Ollama and llama.cpp both speak the OpenAI API shape — point any OpenAI-compatible app at <code>http://localhost:11434/v1</code> and you have a free, private backend.</p>
+
+      <h2>Why this matters right now</h2>
+      <p>Cloud AI is convenient, but it's a subscription you rent forever. Local AI is an asset you own. For a few hundred dollars of used hardware, you get private, unlimited, offline intelligence — and you stop paying rent on a tool that reads everything you type.</p>
+
+      <p class="mt-8"><strong>Want the full system?</strong> Our <a href="https://studiogreg.gumroad.com/l/run-your-own-local-ai" rel="sponsored noopener" target="_blank" class="cta bg-yellow-400 text-black">complete setup guide →</a> takes you from zero to a 17-page tested playbook: hardware buying, install, RAG, multi-GPU, troubleshooting, and the mistakes we made so you don't.</p>
+    </article>
+  </main>
+
+  <footer class="px-8 py-12 border-t border-gray-800 text-center text-gray-500">
+    <p>&copy; 2026 Studio 535 / Dream Forge LLC. All rights reserved.</p>
+    <p class="mt-2">Precision Crafted in Virginia Beach, VA</p>
+  </footer>
+</body>
+</html>
